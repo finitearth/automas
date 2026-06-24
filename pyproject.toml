@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "automas"
+version = "0.1.0"
+description = "AutoMas — cantante-compatible Multi-Agent System inference library"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+keywords = ["llm", "multi-agent", "cantante", "promptolution"]
+dependencies = [
+    "anthropic>=0.30.0",
+]
+
+[project.optional-dependencies]
+openai = ["openai>=1.0.0"]
+dev = ["pytest", "ruff"]
+
+[project.urls]
+Repository = "https://github.com/finitearth/automas"
+
+[tool.hatch.build.targets.wheel]
+packages = ["automas"]
